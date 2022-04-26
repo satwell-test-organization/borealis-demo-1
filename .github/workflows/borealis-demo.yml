@@ -4,11 +4,10 @@ on:
   push: # What triggers a deployment. For example, `push`.
     branches:
       - main # What branch triggers a deployment. For example, `main`.   
-runs-on: self-hosted
 jobs:
   build:
     name: deploy from main
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
